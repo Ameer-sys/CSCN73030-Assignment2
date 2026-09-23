@@ -45,5 +45,17 @@ int main()
 
     inputFile.close();
 
+#ifdef _DEBUG
+    // Debug-only functionality used to verify that student
+    // information was loaded correctly from the input file.
+    cout << "DEBUG MODE - Student Data" << endl;
+    cout << "-------------------------" << endl;
+
+    for (const STUDENT_DATA& student : students)
+    {
+        cout << student.firstName << " " << student.lastName << endl;
+    }
+#endif
+
     return 0;
 }
